@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'a_home',
     'a_users',
     'messageboard',
+    'django_celery_results'
 ]
 
 SITE_ID = 1
@@ -160,3 +161,5 @@ ACCOUNT_EMAIL_REQUIRED = True
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_RESULT_EXTENDED = True
